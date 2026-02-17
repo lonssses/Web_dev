@@ -1,0 +1,9 @@
+<div class="card">
+  <h3>{{ user.name }}</h3>
+  <p>{{ user.role }}</p>
+  <p [style.color]="user.active ? 'green' : 'red'">
+    {{ user.active ? 'Active' : 'Inactive' }}
+  </p>
+
+  <button (click)="delete()">Delete</button>
+</div>

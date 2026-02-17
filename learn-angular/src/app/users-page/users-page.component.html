@@ -1,0 +1,21 @@
+<div class="page">
+  <h1>Users</h1>
+
+  <button class="btn" (click)="toggleFilter()">
+    {{ showOnlyActive ? 'Show All' : 'Show Only Active' }}
+  </button>
+
+  <p *ngIf="filteredUsers.length === 0">
+    No users 😅
+  </p>
+
+  <div class="grid">
+    <app-user-card
+      *ngFor="let user of filteredUsers"
+      [user]="user"
+      (remove)="removeUser($event)"
+    ></app-user-card>
+  </div>
+
+  <app-share-bar></app-share-bar>
+</div>

@@ -1,0 +1,16 @@
+.page {
+  max-width: 900px;
+  margin: 24px auto;
+  font-family: Arial;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.btn {
+  margin: 12px 0;
+  padding: 10px;
+}
